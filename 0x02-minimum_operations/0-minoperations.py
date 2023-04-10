@@ -5,7 +5,7 @@
 def minOperations(n):
     """
     minOperations
-    Get the fewest number of operations needed to result in exactly n time H characters
+    the fewest number of operations needed for n H characters
     """
 
     if (n < 2):
