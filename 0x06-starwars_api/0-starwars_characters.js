@@ -5,7 +5,7 @@ const request = require('request');
 let url = 'https://swapi-api.alx-tools.com/api/films/';
 
 function getCharacters (url) {
-	request(url + process.argv[2], (error, response, body) => {
+	request(url + process.argv[2], function (error, response, body) {
 		if (error) {
 			console.log(response.statusCode);
 			throw error;
@@ -21,7 +21,7 @@ function getCharacters (url) {
 function ordered (chars, x) {
 	if (x === chars.length) return;
 
-	request(chars[x], (err, res, body) => {
+	request(chars[x], function (err, res, body) {
 		if (err) {
 			console.log(res.statusCode);
 			throw err;
